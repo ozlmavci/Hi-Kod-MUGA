@@ -1,0 +1,45 @@
+// 1- List<int> numbers = [5, 10, 15, 20, 25]; listedeki çift sayıların sayısını bulan bir Dart programı yazınız.
+
+void main() {
+  List<int> numbers = [5, 10, 15, 20, 25];
+  int count = 0;
+
+  for (int number in numbers) {
+    if (number % 2 == 0) {
+      count++;
+    }
+  }
+
+  print("Listedeki çift sayıların sayısı: $count");
+}
+
+
+// 2- Map<String, int> notlar = {'Ali': 4, 'Veli': 6, 'Ahmet': 8}; Verilen map'teki değerlerin toplamı 10'dan büyükse "Büyük", küçükse "Küçük" yazan bir Dart programı yazınız.
+
+void main() {
+  Map<String, int> notlar = {'Ali': 4, 'Veli': 6, 'Ahmet': 8};
+  int toplam = 0;
+
+  for (int not in notlar.values) {
+    toplam += not;
+  }
+
+  if (toplam > 10) {
+    print("Büyük");
+  } else {
+    print("Küçük");
+  }
+}
+
+
+// 3- Bir int tipinde set oluşturun ve içerisinde 10 sayısı var mı diye kontrol eden bir Dart programı yazınız. Eğer varsa, "10 bulundu", yoksa "10 bulunamadı" yazınız.
+
+void main() {
+  Set<int> sayiKumesi = {1, 5, 9, 14, 10};
+
+  if (sayiKumesi.contains(10)) {
+    print("10 bulundu");
+  } else {
+    print("10 bulunamadı");
+  }
+}
