@@ -1,0 +1,50 @@
+Soru 1: Liste Elemanlarını Toplama
+Bir fonksiyon yazınız, bu fonksiyon bir liste alacak ve listedeki tüm sayıların toplamını döndürmesi gerekiyor.
+
+int listeToplami(List<int> sayilar) {
+  int toplam = 0;
+  for (int sayi in sayilar) {
+    toplam += sayi;
+  }
+  return toplam;
+}
+
+void main() {
+  List<int> ornekListe = [1, 2, 3, 4, 5];
+  print("Toplam: ${listeToplami(ornekListe)}"); // Çıktı: Toplam: 15
+}
+
+
+
+Soru 2: Tek Sayıları Filtreleme
+Bir fonksiyon oluşturunuz, bu fonksiyon bir liste alacak ve sadece tek sayılardan oluşan yeni bir liste döndürmesi gerekiyor.
+
+List<int> tekSayilariFiltrele(List<int> sayilar) {
+  List<int> tekSayilar = [];
+  for (int sayi in sayilar) {
+    if (sayi % 2 != 0) {
+      tekSayilar.add(sayi);
+    }
+  }
+  return tekSayilar;
+}
+
+void main() {
+  List<int> ornekListe = [1, 2, 3, 4, 5, 6, 7];
+  print("Tek sayılar: ${tekSayilariFiltrele(ornekListe)}"); // Çıktı: Tek sayılar: [1, 3, 5, 7]
+}
+
+
+
+Soru 3: Listeyi Ters Çevirme
+Bir fonksiyon yazınız, bu fonksiyon bir liste alacak ve listenin elemanlarını ters çevirerek yeni bir liste döndürmesi gerekiyor.
+
+List<int> listeyiTersCevir(List<int> sayilar) {
+  List<int> tersListe = List.from(sayilar.reversed);
+  return tersListe;
+}
+
+void main() {
+  List<int> ornekListe = [1, 2, 3, 4, 5];
+  print("Ters liste: ${listeyiTersCevir(ornekListe)}"); // Çıktı: Ters liste: [5, 4, 3, 2, 1]
+}
